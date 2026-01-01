@@ -21,10 +21,10 @@ def requirements():
     except FileNotFoundError:
         # Fallback to hardcoded dependencies if requirements.txt is not available
         return [
-            "pydantic~=2.11.10",
-            "httpx~=0.23.0",
-            "ujson~=5.4.0",
-            "appdirs~=1.4.4",
+            "pydantic>=2.0.0",
+            "httpx>=0.27.0",
+            "ujson>=5.4.0",
+            "appdirs>=1.4.4",
         ]
 
 
