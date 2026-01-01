@@ -29,7 +29,7 @@ def requirements():
 
 
 setup(
-    name="tochka_api",
+    name="tochechka",
     version=environ.get("TAG_VERSION", "0.0.0").replace("v", ""),
     packages=[
         "tochka_api",
