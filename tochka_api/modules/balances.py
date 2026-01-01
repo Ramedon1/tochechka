@@ -1,5 +1,5 @@
-from models.responses import BalanceResponse
-from modules import TochkaApiBase
+from ..models.responses import BalanceResponse
+from . import TochkaApiBase
 
 
 class TochkaApiBalances(TochkaApiBase):

@@ -1,9 +1,9 @@
-from models.responses import (
+from ..models.responses import (
     SbpMerchantsResponse,
     SbpRegisterMerchantResponse,
     TochkaBooleanResponse,
 )
-from modules import TochkaApiBase
+from . import TochkaApiBase
 
 
 class TochkaApiSbpMerchant(TochkaApiBase):

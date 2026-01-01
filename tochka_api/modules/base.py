@@ -7,12 +7,12 @@ from typing import Literal, Type
 
 import jwt
 import ujson as ujson
-from exceptions.base import TochkaError
+from ..exceptions.base import TochkaError
 from httpx import AsyncClient, Response
-from models import PermissionsEnum, Tokens
-from models.responses import ConsentsResponse, TochkaBaseResponse
-from settings import HTTP_TIMEOUT, TOCHKA_BASE_API_URL
-from token_manager import (
+from ..models import PermissionsEnum, Tokens
+from ..models.responses import ConsentsResponse, TochkaBaseResponse
+from ..settings import HTTP_TIMEOUT, TOCHKA_BASE_API_URL
+from ..token_manager import (
     AbstractTokenManager,
     LocalStorageTokenManager,
 )

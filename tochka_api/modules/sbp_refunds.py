@@ -2,9 +2,9 @@ import re
 from _decimal import Decimal
 from datetime import datetime, timedelta, date
 
-from models.responses import SbpPaymentsResponse, SbpRefundResponse
-from modules import TochkaApiBase
-from settings import CHARS_FOR_PURPOSE
+from ..models.responses import SbpPaymentsResponse, SbpRefundResponse
+from . import TochkaApiBase
+from ..settings import CHARS_FOR_PURPOSE
 
 
 class TochkaApiSbpRefunds(TochkaApiBase):

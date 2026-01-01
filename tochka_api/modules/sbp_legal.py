@@ -1,11 +1,11 @@
-from models.responses import (
+from ..models.responses import (
     SbpCustomerInfoResponse,
     SbpLegalEntityResponse,
     SbpRegisterLegalEntityResponse,
     TochkaBooleanResponse,
 )
-from models.responses.sbp_legal import SbpAccountsResponse
-from modules import TochkaApiBase
+from ..models.responses.sbp_legal import SbpAccountsResponse
+from . import TochkaApiBase
 
 
 class TochkaApiSbpLegal(TochkaApiBase):

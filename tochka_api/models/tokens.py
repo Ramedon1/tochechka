@@ -3,7 +3,7 @@ from typing import Callable
 
 import dateutil.parser
 
-from settings import HTTP_TIMEOUT
+from ..settings import HTTP_TIMEOUT
 
 
 class TokenField(str):

@@ -1,5 +1,5 @@
-from models.responses.accounts import AccountsResponse
-from modules import TochkaApiBase
+from ..models.responses.accounts import AccountsResponse
+from . import TochkaApiBase
 
 
 class TochkaApiAccounts(TochkaApiBase):

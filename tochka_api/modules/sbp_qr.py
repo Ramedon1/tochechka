@@ -3,14 +3,14 @@ from decimal import Decimal
 from datetime import date, datetime, timedelta
 from typing import Literal
 
-from models.responses import (
+from ..models.responses import (
     SbpQrPaymentDataResponse,
     SbpQrPaymentStatusResponse,
     SbpQrsResponse,
     SbpRegisterQrResponse,
     TochkaBooleanResponse,
 )
-from modules import TochkaApiBase
+from . import TochkaApiBase
 
 
 class TochkaApiSbpQr(TochkaApiBase):

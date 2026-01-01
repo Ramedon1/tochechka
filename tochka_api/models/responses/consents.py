@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from models import PermissionsEnum
-from models.responses import TochkaBaseResponse
+from .. import PermissionsEnum
+from . import TochkaBaseResponse
 from pydantic import Field
 
 
