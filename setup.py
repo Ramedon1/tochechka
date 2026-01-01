@@ -16,22 +16,20 @@ def requirements():
 
 setup(
     name="tochka_api",
-    version=environ.get("TAG_VERSION").replace("v", ""),
+    version=environ.get("TAG_VERSION", "0.0.0").replace("v", ""),
     packages=[
         "tochka_api",
         "tochka_api.exceptions",
         "tochka_api.models",
         "tochka_api.models.responses",
     ],
-    url="https://github.com/WhiteApfel/tochka_api",
+    url="https://github.com/Ramedon1/tochechka",
     license="Mozilla Public License 2.0",
-    author="WhiteApfel",
-    author_email="white@pfel.ru",
+    author="Ramedon1",
     description="Simple Tochka Bank Open API client",
     install_requires=requirements(),
     project_urls={
-        "Source code": "https://github.com/WhiteApfel/tochka-api",
-        "Write me": "https://t.me/whiteapfel",
+        "Source code ORIGINAL": "https://github.com/WhiteApfel/tochka-api",
     },
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
