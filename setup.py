@@ -5,13 +5,27 @@ from setuptools import setup
 
 
 def read(filename):
-    with open(filename, encoding="utf-8") as file:
-        return file.read()
+    """Read file contents with error handling."""
+    try:
+        with open(filename, encoding="utf-8") as file:
+            return file.read()
+    except FileNotFoundError:
+        return ""
 
 
 def requirements():
-    with open("requirements.txt", "r") as req:
-        return [r for r in req.read().split("\n") if r]
+    """Read requirements from requirements.txt or return default dependencies."""
+    try:
+        with open("requirements.txt", "r") as req:
+            return [r.strip() for r in req.read().split("\n") if r.strip() and not r.startswith("#")]
+    except FileNotFoundError:
+        # Fallback to hardcoded dependencies if requirements.txt is not available
+        return [
+            "pydantic~=2.11.10",
+            "httpx~=0.23.0",
+            "ujson~=5.4.0",
+            "appdirs~=1.4.4",
+        ]
 
 
 setup(
@@ -22,6 +36,7 @@ setup(
         "tochka_api.exceptions",
         "tochka_api.models",
         "tochka_api.models.responses",
+        "tochka_api.modules",
     ],
     url="https://github.com/Ramedon1/tochechka",
     license="Mozilla Public License 2.0",
